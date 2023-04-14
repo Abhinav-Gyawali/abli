@@ -1,0 +1,49 @@
+body{
+background-color:var(--edit-bg);
+
+
+
+}
+
+
+
+
+
+.btn{
+margin-left:75%;
+background-color:var(--secondary-color);
+color:var(--primary-color);
+margin-bottom:25px;
+margin-top:10px;
+
+}
+
+
+.eacont,.epcont{
+box-sizing:border-box;
+padding:20px 15px 30px 15px;
+margin:50px 40px 100px 40px;
+border:3px solid var(--edit-color);
+border-radius:10px;
+background-color:var(--edit-color);
+box-shadow:0px 0px 10px 5px var(--edit-color);
+}
+
+
+
+
+
+
+.edit{
+border:5px. solid var(--secondary-color);
+width:84%;
+background-color:var(--edit-color);
+color:var(--Secondary-color);
+border-bottom-style: groove;
+
+}
+
+.edit:focus{
+outline:none;
+
+}

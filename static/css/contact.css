@@ -1,0 +1,203 @@
+/* Style for the main note */
+.note {
+margin-left:;
+  font-size: 1.2em;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 10px;
+  color:var(--secondary-color);
+}
+
+/* Style for the contact information */
+.cont_address {
+  font-size: 1.1em;
+  color: var(--secondary-color);;
+  margin-bottom: 20px;
+  
+}
+
+/* Style for the developer team name */
+.cont_address h3 {
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+/* Style for the details in the contact information */
+.details {
+  margin-bottom: 5px;
+}
+
+/* Style for the note below the email field */
+.note1 {
+  font-size: 0.8em;
+  color: #777;
+  margin-top: 5px;
+}
+
+/* Style for the form container */
+.form {
+  margin-top: 20px;
+}
+
+/* Style for the form labels */
+.dlable {
+  display: block;
+  font-size: 1.1em;
+  color: #555;
+  margin-left:7px;
+  position:absolute;
+  margin-top:-60px;
+  color:var(--secondary-color);
+}
+#lablea{
+margin-top:-375px;
+
+}
+#lableb{
+
+margin-top:-307px;
+}
+#lablec{
+
+margin-top:-240px;
+
+}
+textarea{
+
+
+
+}
+span{
+transition: 0.5s;
+color:var(--secondary-color);
+font-weight:400;
+font-family:'Montserrat', sans-serif;
+}
+.note1{
+display:none;
+margin-top:-317px;
+position:absolute;
+padding:5px;
+width:350px;
+}
+.form input:focus ~ span,.form input:valid ~ span,form textarea:focus ~ span{
+transform:translateX(-5px) translateY(-33px);
+
+}
+
+.form input:focus ~ #lablea{
+margin-top:-415px;
+}
+
+.form input:focus ~ #lableb{
+margin-top:-347px;
+}
+
+
+.form input:focus ~ .note1{
+display:block;
+color:red;
+}
+.form input:focus ~ textarea{
+margin-top:40px;
+}
+
+::placeholder{
+opacity:0;
+}
+input:focus::placeholder,textarea:focus::placeholder{
+opacity:1;
+}
+
+
+/* Style for the form inputs */
+input[type="text"],
+input[type="email"],
+textarea {
+color:var(--secondary-color);
+background:var(--primary-color);
+  width: 100%;
+  padding: 8px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight:400;
+  font-size: 0.8em;
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+
+/* Style for the form submit button */
+button[type="submit"] {
+width:340px;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Style for the form submit button on hover */
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Style for the form submit button on focus */
+button[type="submit"]:focus {
+  outline: none;
+}
+
+.form{
+width:370px;
+border:4px solid var(--secondary-color);
+border-radius:10px;
+box-sizing:border-box;
+padding:8px;
+margin-left:30px;
+margin-bottom:20px;
+box-shadow:;
+}
+.h2{
+margin-top:10px;
+font-weight:900;
+
+}
+.hid{
+display:none;
+position:absolute;
+overflow:hidden;
+z-index:9999999;
+height:150%;
+width:100%;
+
+}
+
+
+.title{
+font-weight:700;
+color:black;
+margin-bottom:420px;
+margin-left:50px;
+margin-top:70px;
+}
+
+
+.contact-img {
+margin-top:-550px;
+height:500px;
+width:100%;
+position:absolute;
+z-index:-1;
+}
+.icon{
+padding:50px;
+border-radius:50%;
+background:skyblue;
+align-items:center;
+display:inline-block;
+margin:3% 35% 45% 35%;
+}
+
+
+
+
