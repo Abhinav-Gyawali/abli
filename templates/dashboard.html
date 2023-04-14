@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block head %}
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+      {% endblock head %}
+{% block title %}Dashboard{% endblock title %} 
+{% block body %}
+<!--Profile card start-->
+    <div class="card">
+      <div class="card-image">
+        <img src="" alt="">
+      </div>
+      <div class="profile-image">
+        <img id="profilei"src="{{session['imageurl']}}">
+      </div>
+      <div class="card-content">
+        <h3>{{session["firstname"]}} {{session["lastname"]}}</h3>
+        <center>
+        <button onclick="window.location='/dashboard/edit-profile'" class="editprofile">Edit Profile</button>
+        <button onclick="window.location='/dashboard/edit-account'" class="editaccount">Edit Account</button>
+        </center>
+        <p>{{session['bio']}}</p>
+      </div>
+      <div class="icons">
+        <a href="{{session['facebook']}}" class="fab fa-facebook-f"></a>
+        <a href="{{session['github']}}" class="fab fa-github"></a>
+        <a href="{{session['instagram']}}" class="fab fa-instagram"></a>
+        <a href="{{session['twitter']}}" class="fab fa-twitter"></a>
+        <a href="https://wa.me/+977{{session['whatsapp']}}" class="fab fa-whatsapp"></a>
+      </div>
+    </div>
+    <!--Profile card end-->
+
+
+
+{% endblock body %}

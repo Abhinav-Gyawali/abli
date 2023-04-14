@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block head %}
+<script src="{{ url_for('static', filename='js/editprofile.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/editprofile.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/editaccount.css') }}">
+      {% endblock head %}
+{% block title %}Edit Profile{% endblock title %} 
+{% block body %}
+<div class="epcont">
+<h2>Edit Profile</h2>
+<form action="" method="post" enctype = "multipart/form-data">
+<ul>
+<li>Profile Image</li>
+<input type="file"
+       id="image" name="image" class="image"
+       accept="image/png, image/jpeg,image/jpg,image/gif,image/svg,image/webp,image/apng,image/avif" value="{{session['profile']}}" >
+
+<li>Bio</li>
+<input name="bio" id="bio"class="edit"type="text" value="{{session['bio']}}" placeholder="Bio">
+<li>Facebook Url</li>
+<input name="facebook" id="facebook"class="edit" type="text" value="{{session['facebook']}}" placeholder="Your facebook account url">
+<li>Github Url</li>
+<input name="github" id="github"class="edit" type="text" value="{{session['github']}}" placeholder="Your github account url">
+<li>Instagram Url</li>
+<input name="instagram" id="instagram"class="edit" type="text" value="{{session['instagram']}}" placeholder="Your instagram account url">
+<li>Twitter Url</li>
+<input name="twitter" id="twitter"class="edit" type="text" value="{{session['twitter']}}" placeholder="Your Twitter account url">
+<li>Whatsapp Number</li>
+<input name="whatsapp" id="whatsapp" class="edit" type="number" value="{{session['whatsapp']}}" placeholder="Your whatsapp number">
+
+</ul>
+<input class="btn"type="submit" value="Update">
+</form>
+</div>
+{% endblock body %}

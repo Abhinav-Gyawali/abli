@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block head %}
+<script src="{{ url_for('static', filename='js/contact.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+      {% endblock head %}
+{% block title %}Contact Us{% endblock title %} 
+{% block body %} 
+<br>
+<!--<input onclick="funct()" id="hid"class="hid"type="button">-->
+<div id="hid" class="bd">
+<div class="title"><h1>Contact Us</h1></div>
+<img src="/static/images/contact.png" class="contact-img">
+<i class="icon fa-solid fa-lock fa-lg fa-2xl"></i>
+
+<i class="icon fa-sharp fa-solid fa-location-dot fa-2xl"></i>
+
+<i class="icon fa-sharp fa-solid fa-paper-plane fa-2xl"></i>
+
+<i class="icon fa-sharp fa-solid fa-earth-asia fa-2xl"></i>
+
+
+<!--<div class="cont_address">
+<h3><I>NEG.EDU.NP developer and content maker team</I></h3>
+<ol>
+<li><div class="details">Admin : Abhinav Gyawali</div></li>
+<li><div class="details">Address : Lumbini Province</div></li>
+<li><div class="details">Bussiness Email : contact@abhinavgyawali.ml</div></li>
+<li><div class="details">Admin Email : publicgyawali@gmail.com</div></li>
+</ol>
+</div>-->
+<p>If you have any queries related to model question Fell free to send message below.</p>
+
+<div class="form">
+<h2 class="h2"><center>Contact Form</center></h2><br>
+<form method="post">
+
+<input placeholder="Enter your name......." type="text" name="nae" required>
+<br>
+
+<input placeholder="Enter your email....." type="email" name="email"required>
+
+
+<textarea placeholder="What you want to suggest...." id="ta" name="subject" rows="10" cols="10"></textarea>
+<span id="lablea" class="dlable"for="name">Name</span>
+<span id="lableb" class="dlable" for="email">Email</span>
+<span id="lablec" class="dlable" for="sub">Subject</span>
+<div class="note1">Note: Please use valid email(if you don't use valid email form will not be submitted).</div>
+
+<center><button id="send-btn" class="btn btn-primary" type="submit">Submit</button></center>
+</form></div>
+
+</div>
+<script src=”https://code.jquery.com/jquery-3.6.0.min.js” integrity=”sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=” crossorigin=”anonymous”;>
+</script>
+{% endblock body %}

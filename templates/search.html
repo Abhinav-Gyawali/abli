@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block head %}
+<script src="{{ url_for('static', filename='js/search.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/search.css') }}">
+      {% endblock head %}
+{% block title %}Search{% endblock title %} 
+{% block body %} 
+<br>
+<i class="fa-solid fa-magnifying-glass"></i>
+<input placeholder="Search Here" type="search" id="search">
+<hr weight="5px">
+
+
+{% endblock body %}

@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block head %}
+<script src="{{ url_for('static', filename='js/see.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/see.css') }}">
+      {% endblock head %}
+{% block title %}Grade 10 SEE{% endblock title %} 
+{% block body %}
+
+<br>
+<i class="fa-solid fa-magnifying-glass"></i>
+<input onkeyup="myFunction()" placeholder="Search Here" type="text" id="search-see">
+
+<hr weight="5px"><br>
+
+<table border="1px"id="tblsee">
+<tr class="header">
+<th width="26%"></th>
+<th width="24%">Subject</th>
+<th width="50%">Description</th>
+</tr>
+
+<tr onclick="window.location='/oops'">
+<td><img src="{{ url_for('static', filename='images/English.jpg') }}" alt="picture" class="see-sub-img" id="see-img-eng"></td>
+<td>ENGLISH</td>
+<td>It's a exam model question for English for grade 10 and also for their SEE preparation.</td>
+</tr>
+
+<tr onclick="window.location='/oops'">
+<td><img src="{{ url_for('static', filename='images/Maths.jpg') }}" alt="picture" class="see-sub-img" id="see-img-maths"></td>
+<td>MATHS</td>
+<td>It's a exam model question for Mathematics for grade 10 and also for their SEE preparation.</td>
+</tr>
+
+<tr onclick="window.location='/oops'">
+<td><img src="{{ url_for('static', filename='images/Science.jpg') }}" alt="picture" class="see-sub-img" id="see-img-sci"></td>
+<td>SCIENCE AND TECHNOLOGY</td>
+<td>It's a exam model question for Science and Technology for grade 10 and also for their SEE preparation.</td>
+</tr>
+
+<tr onclick="window.location='/oops'">
+<td><img src="{{ url_for('static', filename='images/Social.jpg') }}" alt="picture" class="see-sub-img" id="see-img-soc"></td>
+<td>SOCIAL STUDIES</td>
+<td>It's a exam model question for Social Studies for grade 10 and also for their SEE preparation.</td>
+</tr>
+
+<tr onclick="window.location='/oops'">
+<td><img src="{{ url_for('static', filename='images/Nepali.jpg') }}" alt="picture" class="see-sub-img" id="see-img-nep"></td>
+<td>NEPALI</td>
+<td>It's a exam model question for Nepali for grade 10 and also for their SEE preparation.</td>
+</tr>
+
+<tr onclick="window.location='/oops'">
+<td><img src="{{ url_for('static', filename='images/Computer.jpg') }}" alt="picture" class="see-sub-img" id="see-img-nep"></td>
+<td>COMPUTER SCIENCE</td>
+<td>It's a exam model question for Computer for grade 10 and also for their SEE preparation.</td>
+</tr>
+
+<tr onclick="window.location='/oops'">
+<td><img src="{{ url_for('static', filename='images/Maths.jpg') }}" alt="picture" class="see-sub-img" id="see-img-omaths"></td>
+<td>OPTIONAL MATHS</td>
+<td>It's a exam model question for Optional Maths for grade 10 and also for their SEE preparation.</td>
+</tr>
+
+<tr onclick="window.location='/oops'">
+<td><img src="{{ url_for('static', filename='images/Economics.jpg') }}" alt="picture" class="see-sub-img" id="see-img-eco"></td>
+<td>ECONOMICS</td>
+<td>It's a exam model question for Economics for grade 10 and also for their SEE preparation.</td>
+</tr>
+
+<tr onclick="window.location='/oops'">
+<td><img src="{{ url_for('static', filename='images/Accountancy.jpg') }}" alt="picture" class="see-sub-img" id="see-img-acc"></td>
+<td>ACCOUNT</td>
+<td>It's a exam model question for Account for grade 10 and also for their SEE preparation.</td>
+</tr>
+</table>
+<br>
+
+
+
+{% endblock body %}

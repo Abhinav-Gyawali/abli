@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block head %}
+<script src="{{ url_for('static', filename='js/editaccount.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/editaccount.css') }}">
+      {% endblock head %}
+{% block title %}Edit Account{% endblock title %} 
+{% block body %}
+<div class="eacont">
+<h2>Edit Account</h2>
+<form action="" method="post">
+<ul>
+<li>Email</li>
+<input name="email" id="email"class="edit"type="text" value="{{session['email']}}" placeholder="Email">
+<li>Phone Number</li>
+<input name="phone" id="phone"class="edit" type="number" value="{{session['phone']}}" placeholder="Phone">
+<li>Password</li>
+<input name="password" id="password"class="edit" type="password" value="{{session['password']}}" placeholder="password">
+
+</ul>
+<input class="btn"type="submit" value="Update">
+</form>
+</div>
+{% endblock body %}

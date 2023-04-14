@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% block head %}
+<script src="{{ url_for('static', filename='js/ble.js') }}" defer></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/ble.css') }}">
+      {% endblock head %}
+{% block title %}Grade 8 BLE{% endblock title %} 
+{% block body %}
+<br>
+<i class="fa-solid fa-magnifying-glass"></i>
+<input onkeyup="myFunction()" placeholder="Search Here" type="text" id="search-ble">
+<hr><br>
+<table id="tblble">
+<tr class="header">
+<th width="26%"></th>
+<th width="24%">Subject</th>
+<th width="50%">Description</th>
+</tr>
+<tr onclick="window.location='/oops'"><a href="#" >
+<td><img src="{{ url_for('static', filename='images/English.jpg') }}" alt="picture" class="ble-sub-img"></td>
+<td >ENGLISH</td>
+<td>It's a exam model question for English for grade 8 and also for their BLE preparation.</td>
+</a></tr>
+<tr onclick="window.location='/oops'"><a href="#" >
+<td><img src="{{ url_for('static', filename='images/Maths.jpg') }}" alt="picture" class="ble-sub-img"></td>
+<td>MATHS</td>
+<td>It's a exam model question for Compulsory Mathematics for grade 8 and also for their BLE preparation.</td>
+</a></tr>
+<tr onclick="window.location='/oops'"><a href="#" >
+<td><img src="{{ url_for('static', filename='images/Science.jpg') }}" alt="picture" class="ble-sub-img"></td>
+<td>SCIENCE AND TECHNOLOGY</td>
+<td>It's a exam model question for Science and Technology for grade 8 and also for their BLE preparation.</td>
+</a></tr>
+<tr onclick="window.location='/oops'"><a href="#" >
+<td><img src="{{ url_for('static', filename='images/Social.jpg') }}" alt="picture" class="ble-sub-img"></td>
+<td>SOCIAL STUDIES</td>
+<td>It's a exam model question for Social Studies for grade 8 and also for their BLE preparation.</td>
+</a></tr>
+<tr onclick="window.location='/Grade 8/NEPALI'"><a href="#" >
+<td><img src="{{ url_for('static', filename='images/Nepali.jpg') }}" alt="picture" class="ble-sub-img"></td>
+<td>NEPALI</td>
+<td>It's a exam model question for Nepali for grade 8 and also for their BLE preparation.</td>
+</a></tr>
+<tr onclick="window.location='/oops'"><a href="#" >
+<td><img src="{{ url_for('static', filename='images/Computer.jpg') }}" alt="picture" class="ble-sub-img"></td>
+<td>COMPUTER SCIENCE</td>
+<td>It's a exam model question for Computer Science for grade 8 and also for their BLE preparation.</td>
+</a></tr>
+<tr onclick="window.location='/oops'"><a href="#" >
+<td><img src="{{ url_for('static', filename='images/Moral.jpg') }}" alt="picture" class="ble-sub-img"></td>
+<td>MORAL EDUCATION</td>
+<td>It's a exam model question for Moral Education for grade 8 and also for their BLE preparation.</td>
+</a></tr>
+<tr onclick="window.location='/oops'"><a href="#" >
+<td><img src="{{ url_for('static', filename='images/Health.jpg') }}" alt="picture" class="ble-sub-img"></td>
+<td>HEALTH & PHYSICAL EDUCATION</td>
+<td>It's a exam model question for Health and Physical Education for grade 8 and also for their BLE preparation.</td>
+</a></tr>
+<tr onclick="window.location='/oops'"><a href="#" >
+<td><img src="{{ url_for('static', filename='images/Maths.jpg') }}" alt="picture" class="ble-sub-img"></td>
+<td>OPTIONAL MATHS</td>
+<td>It's a exam model question for Optional Mathematics for grade 8 and also for their BLE preparation.</td>
+</a></tr>
+<tr onclick="window.location='/oops'"><a href="#" >
+<td><img src="{{ url_for('static', filename='images/obte.jpg') }}" alt="picture" class="ble-sub-img"></td>
+<td>OBTE</td>
+<td>It's a exam model question for Occupation Business and Technology Education (OBTE) also known as (OVTE/PBTE) for grade 8 and also for their BLE preparation.</td>
+</a></tr>
+<!-- <tr onclick="window.location='/oops'">
+<td><img src="#" alt="picture" class="ble-sub-img"></td>
+<td></td>
+<td>It's a exam model question for English for grade 8 and also for their BLE preparation.</td>
+</tr>
+<tr onclick="window.location='/'">
+<td><img src="#" alt="picture" class="ble-sub-img"></td>
+<td></td>
+<td>It's a exam model question for English for grade 8 and also for their BLE preparation.</td>
+</tr>
+<tr onclick="window.location='/'">
+<td><img src="#" alt="picture" class="ble-sub-img"></td>
+<td></td>
+<td>It's a exam model question for English for grade 8 and also for their BLE preparation.</td>
+</tr>. -->
+
+
+
+
+
+
+
+
+</table>
+<br>
+
+
+{% endblock body %}

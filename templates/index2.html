@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<script src="{{ url_for('static', filename='js/index.js') }}"></script><link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">{% endblock head %}
+{% block title %}Home{% endblock title %} 
+
+{% block body %}
+
+<div class="headings" id="introduction"><h1>Introduction</h1></div>
+<div class="introduction">
+
+
+</div>
+
+<div class="headings" id="features"><h1>Features</h1></div>
+<div class="features"><p>
+    we are at your service to help or guide you in your board exams. Most of the young examineer
+    choses our website for the preparation of their examinaations. Our website provides you the most
+    important questions for the board exams. As we can see most of the student's results are so downgraded
+    in this +2 NEB board exam as well as SEE also. So, you should be fully prepared for your upcoming examinaations.
+    Most of the top listed and importent model questions and notice are given below. You could definetly 
+    go and fully visit our website.<br><br>
+    If you have any queries then <a class="li-nk" href="#footer-left">contact us</a>.Thank you!</p>
+</div><br><br><hr>
+
+<div class="index-questions-table">
+<br>
+<i class="fa-solid fa-magnifying-glass"></i>
+<input onkeyup="indFunction()" placeholder="Search Here" type="text" id="search-index">   |
+<select onchange="handleSelectChange(event)" name="grade" id="gradefilter">
+  <option value="hehe">Filter</option>
+  <option value="8">Grade 8(BLE)</option>
+  <option value="10">Grade 10(SEE)</option>
+  <option value="12">Grade 12(BOARDS)</option>
+  <option value="others">Others</option>
+</select>
+<hr><br>
+
+<table id="tblindex">
+<tr class="header">
+<th width="26%">Class</th>
+<th width="24%">Subject</th>
+<th width="50%"></th>
+
+
+</tr>
+<tr onclick="window.location='/oops'" class="xii-index" id="maths-xii-index">
+<td>GRADE 12</td>
+<td>MATHMATICS</td>
+<td><img src="{{ url_for('static', filename='images/maths.jpg') }}" class="index-sub-img"></td>
+</tr>
+<tr onclick="window.location='/oops'" class="see-index" id="maths-see-index">
+<td>GRADE 10</td>
+<td>MATHMATICS</td>
+<td><img src="{{ url_for('static', filename='images/maths.jpg') }}" class="index-sub-img"></td>
+
+
+</tr>
+<tr onclick="window.location='/oops'" class="ble-index" id="maths-ble-index">
+<td>GRADE 8</td>
+<td>MATHMATICS</td>
+<td><img src="{{ url_for('static', filename='images/maths.jpg') }}" class="index-sub-img"></td>
+
+
+</tr>
+<tr onclick="window.location='/oops'" class="xii-index" id="chemistry-xii-index">
+<td>GRADE 12</td>
+<td>CHEMISTRY</td>
+<td><img src="{{ url_for('static', filename='images/chemistry.jpg') }}" class="index-sub-img"></td>
+
+</tr>
+<tr onclick="window.location='/oops'" class="see-index" id="science-see-index">
+<td>GRADE 10</td>
+<td>SCIENCE</td>
+<td><img src="{{ url_for('static', filename='images/science.jpg') }}" class="index-sub-img"></td>
+
+</tr>
+<tr onclick="window.location='/oops'" class="ble-index" id="science-ble-index">
+<td>GRADE 8</td>
+<td>SCIENCE</td>
+<td><img src="{{ url_for('static', filename='images/science.jpg') }}" class="index-sub-img"></td>
+
+</tr>
+<tr onclick="window.location='/oops'" class="xii-index" id="physics-see-index">
+<td>GRADE 12</td>
+<td>PHYSICS</td>
+<td><img src="{{ url_for('static', filename='images/physics.jpg') }}" class="index-sub-img"></td>
+
+</tr>
+<tr id="page-links-index">
+<td onclick="window.location='/questions/12th-Boards-Model-Questions'">More of Grade 12 (BOARDS)</td>
+<td onclick="window.location='/questions/SEE-Model-Questions'">More of Grade 10(SEE)</td>
+<td onclick="window.location='/questions/BLE-Model-Questions'">More of Grade 8(BLE)</td>
+</tr>
+</table><br><br>
+</div>
+{% endblock body %}

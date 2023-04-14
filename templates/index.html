@@ -1,0 +1,170 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+<script src="{{ url_for('static', filename='js/index2.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock head %}
+{% block title %}Home{% endblock title %} 
+
+{% block body %}
+
+<div class="headings" id="introduction"><h1>Introduction</h1></div>
+<div class="introduction">
+
+
+</div>
+
+<div class="headings" id="features"><h1>Features</h1></div>
+<div class="features"><p>
+    we are at your service to help or guide you in your board exams. Most of the young examineer
+    choses our website for the preparation of their examinaations. Our website provides you the most
+    important questions for the board exams. As we can see most of the student's results are so downgraded
+    in this +2 NEB board exam as well as SEE also. So, you should be fully prepared for your upcoming examinaations.
+    Most of the top listed and importent model questions and notice are given below. You could definetly 
+    go and fully visit our website.<br><br>
+    If you have any queries then <a class="li-nk" href="#footer-left">contact us</a>.Thank you!</p>
+</div><br><br><hr>
+
+<div class="index-questions-table">
+<br>
+<i class="fa-solid fa-magnifying-glass"></i>
+<input onkeyup="indFunction()" placeholder="Search Here" type="text" id="search-index">   |
+<select onchange="test()" name="gradefilter" id="gradefilter">
+  <option value="hehe">Filter</option>
+  <option value="GRADE 8">Grade 8(BLE)</option>
+  <option value="GRADE 10">Grade 10(SEE)</option>
+  <option value="GRADE 12">Grade 12(BOARDS)</option>
+  <option value="others">Others</option>
+</select>
+<hr><br>
+
+<table id="tblindex">
+<tr class="header">
+<th width="26%">Class</th>
+<th width="24%">Subject</th>
+<th width="50%"></th>
+
+
+</tr>
+<tr onclick="window.location='/{{ session['gradelist'][0] }}/{{ session['sulist'][0] }}'" class="xii-index" id="maths-xii-index">
+<td>{{ session['gradelist'][0]}}</td>
+<td>{{ session['sulist'][0]}}</td>
+<td><img src="static/images/{{ session['sulist'][0]}}.jpg" class="index-sub-img"></td>
+</tr>
+<tr onclick="window.location='/{{ session['gradelist'][1] }}/{{ session['sulist'][1] }}'" class="see-index" id="maths-see-index">
+<td>{{ session['gradelist'][1]}}</td>
+<td>{{ session['sulist'][1]}}</td>
+<td><img src="static/images/{{ session['sulist'][1]}}.jpg" class="index-sub-img"></td>
+
+</tr>
+<tr onclick="window.location='/{{ session['gradelist'][2] }}/{{ session['sulist'][2] }}'" class="see-index" id="maths-see-index">
+<td>{{ session['gradelist'][2]}}</td>
+<td>{{ session['sulist'][2]}}</td>
+<td><img src="static/images/{{ session['sulist'][2]}}.jpg" class="index-sub-img"></td>
+
+</tr>
+<tr onclick="window.location='/{{ session['gradelist'][3] }}/{{ session['sulist'][3] }}'" class="see-index" id="maths-see-index">
+<td>{{ session['gradelist'][3]}}</td>
+<td>{{ session['sulist'][3]}}</td>
+<td><img src="static/images/{{ session['sulist'][3]}}.jpg" class="index-sub-img"></td>
+
+</tr>
+<tr onclick="window.location='/{{ session['gradelist'][4] }}/{{ session['sulist'][4] }}'" class="see-index" id="maths-see-index">
+<td>{{ session['gradelist'][4]}}</td>
+<td>{{ session['sulist'][4]}}</td>
+<td><img src="static/images/{{ session['sulist'][4]}}.jpg" class="index-sub-img"></td>
+
+</tr>
+<tr onclick="window.location='/{{ session['gradelist'][5] }}/{{ session['sulist'][5] }}'" class="see-index" id="maths-see-index">
+<td>{{ session['gradelist'][5]}}</td>
+<td>{{ session['sulist'][5]}}</td>
+<td><img src="static/images/{{ session['sulist'][5]}}.jpg" class="index-sub-img"></td>
+
+</tr>
+<tr onclick="window.location='/{{ session['gradelist'][6] }}/{{ session['sulist'][6] }}'" class="see-index" id="maths-see-index">
+<td>{{ session['gradelist'][6]}}</td>
+<td>{{ session['sulist'][6]}}</td>
+<td><img src="static/images/{{ session['sulist'][6]}}.jpg" class="index-sub-img"></td>
+
+</tr>
+<tr onclick="window.location='/{{ session['gradelist'][7] }}/{{ session['sulist'][7] }}'" class="see-index" id="maths-see-index">
+<td>{{ session['gradelist'][7]}}</td>
+<td>{{ session['sulist'][7]}}</td>
+<td><img src="static/images/{{ session['sulist'][7]}}.jpg" class="index-sub-img"></td>
+
+</tr>
+<tr onclick="window.location='/{{ session['gradelist'][8] }}/{{ session['sulist'][8] }}'" class="see-index" id="maths-see-index">
+<td>{{ session['gradelist'][8]}}</td>
+<td>{{ session['sulist'][8]}}</td>
+<td><img src="static/images/{{ session['sulist'][8]}}.jpg" class="index-sub-img"></td>
+
+</tr>
+<tr onclick="window.location='/{{ session['gradelist'][9] }}/{{ session['sulist'][9] }}'" class="see-index" id="maths-see-index">
+<td>{{ session['gradelist'][9]}}</td>
+<td>{{ session['sulist'][9]}}</td>
+<td><img src="static/images/{{ session['sulist'][9]}}.jpg" class="index-sub-img"></td>
+
+</tr>
+<tr id="page-links-index">
+<td onclick="window.location='/questions/12th-Boards-Model-Questions'">More of Grade 12 (BOARDS)</td>
+<td onclick="window.location='/questions/SEE-Model-Questions'">More of Grade 10(SEE)</td>
+<td onclick="window.location='/questions/BLE-Model-Questions'">More of Grade 8(BLE)</td>
+</tr>
+</table><br><br>
+</div>
+<Script>
+function indFunction() {
+  var input, filter, table, tr, td, i, txtValue, show;
+  input = document.getElementById("search-index");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("tblindex");
+  tr = table.getElementsByTagName("tr");
+  link = document.getElementById("page-links-index");
+ 
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+        link.style.display = "";
+      } else {
+        tr[i].style.display = "none";
+        link.style.display = "";
+      
+      };
+    };
+  };
+};
+
+// Another function
+
+function test() {
+var a = document.getElementById("gradefilter");
+var x,table,tr,trlength,ble,see,boards,td,txtValue;
+    x = (a.value || a.options[a.selectedIndex].value);  //crossbrowser solution =)
+    table = document.getElementById("tblindex");
+    tr = table.getElementsByTagName("tr");
+    trlength = tr.length - 1;
+    ble = document.getElementsByClassName("ble-index");
+    see = document.getElementsByClassName("see-index");
+    boards = document.getElementsByClassName("xii-index");
+    for (i = 1; i < trlength; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+//alert("hlo");
+    txtValue = td.textContent || td.innerText;
+    if (txtValue.indexOf(x) > -1 || x=="hehe"){
+    tr[i].style.display = "";
+    } else {
+    tr[i].style.display = "none";
+    }
+    
+    }
+    
+    }
+
+
+</Script>
+    
+{% endblock body %}

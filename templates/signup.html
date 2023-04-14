@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block head %}
+<script src="{{ url_for('static', filename='js/signup.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+      {% endblock head %}
+{% block title %}Signup{% endblock title %} 
+{% block body %}
+
+<center>
+<div class="wrapper">
+	<div class="title-text"> 
+            <div class="title signup">
+               SignUp Form
+            </div>
+	</div>
+	
+	<div class="form-inner">
+		<form action="#" method="POST"class="signup">
+		    <div class="field">
+		    <input type="text" name="firstname" id="firstname" placeholder="First Name" required>
+		    </div>
+		    <div class="field">
+		    <input type="text" name="lastname" id="lastname" placeholder="Last Name">
+		    </div>
+			<div class="field">
+				<input type="email" name="email" id="email" placeholder="Email Address" required>
+			</div>
+			<div class="field">
+			<input type="number" name="phnnbr" id="phnnbr" placeholder="Phone Number">
+			</div>
+			<div class="field">
+				<input type="password" name="password1" id="password1" placeholder="Password" required>
+			</div>
+			<div class="field">
+				<input type="password" name="password2" id="password2" placeholder="Confirm password" required>
+			</div>
+			<div class="field btn">
+			<div class="btn-layer"></div>
+				<input type="submit" value="Signup">
+			</div>
+			<div class="signup-link">
+			Already have an account | <a href="/login">Login!</a>
+			</div><br>
+			<div class="copyright">
+			©Copyright @NEG.EDU.NP 2019-2022
+			</div>
+		</form>
+	</div>
+	
+	
+
+
+ </div>
+
+</center>
+
+{% endblock body %}
